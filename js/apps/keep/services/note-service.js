@@ -7,6 +7,7 @@ _createNotes();
 
 export const noteService = {
     query,
+    remove
 
 
 }
@@ -29,7 +30,7 @@ function _createNotes() {
             },
             {
                 id: "n102",
-                type: "note-txt",
+                type: "fff",
                 isPinned: true,
                 info: {
                     txt: "take Me home!"
@@ -48,4 +49,9 @@ function _createNotes() {
         utilService.saveToStorage(NOTES_KEY, notes);
     }
     return notes;
+}
+
+
+function remove(noteId) {
+    return storageService.remove(NOTES_KEY, noteId);
 }

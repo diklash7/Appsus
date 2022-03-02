@@ -5,7 +5,7 @@ export default {
     
     <p> id:{{note.id}}</p>
     <p> type: {{note.type}}</p>
-    <p> type: {{note.info.txt}}</p>
+    <p> text: {{note.info.txt}}</p>
 
 </section>
 

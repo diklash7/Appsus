@@ -3,19 +3,19 @@ export default {
         <section class="note-filter">
             <label>
             Search notes
-            <input ref="vendorInput" @input="setFilter" type="text" v-model="filterBy.txt" placeholder="Search notes">
+            <input ref="noteInput" @input="setFilter" type="text" v-model="filterBy.type" placeholder="Search notes">
             </label>
         </section>
     `,
     data() {
         return {
             filterBy: {
-                txt: ''
+                type: ''
             }
         };
     },
     mounted(){
-        this.$refs.vendorInput.focus()
+        this.$refs.noteInput.focus()
     },
     methods: {
         setFilter() {
