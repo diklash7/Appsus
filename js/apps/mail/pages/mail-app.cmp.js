@@ -1,6 +1,6 @@
 export default {
     template:`
-        <section class="book-app app-main">
+        <section class="mail-app app-main">
             <h3>book</h3>
         </section>
     `,
