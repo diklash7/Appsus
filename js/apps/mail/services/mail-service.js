@@ -4,6 +4,11 @@ import { storageService } from '../../../services/async-storage-service.js'
 const STORAGE_KEY = 'mails';
 _createMails();
 
+// const loggedinUser = {
+//     email: 'user@appsus.com',
+//     fullname: 'Mahatma Appsus'
+// }
+
 export const mailService = {
     query,
     remove,
@@ -45,14 +50,16 @@ function _createMails() {
     let mails = utilService.loadFromStorage(STORAGE_KEY)
     if (!mails || !mails.length) {
         mails = [{
+                fullname: 'Dikla',
                 id: 'e101',
                 subject: 'Miss you!',
                 body: 'Would love to catch up sometimes',
                 isRead: false,
-                sentAt: 1111111,
+                sentAt: 111111,
                 to: 'momo@momo.com'
             },
             {
+                fullname: 'Itsar',
                 id: 'e102',
                 subject: 'Hello friend!',
                 body: 'What are you doing?',
@@ -61,6 +68,7 @@ function _createMails() {
                 to: 'popo@popo.com'
             },
             {
+                fullname: 'Inbar',
                 id: 'e103',
                 subject: 'Good bye!',
                 body: 'I am going',

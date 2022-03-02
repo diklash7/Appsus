@@ -1,0 +1,18 @@
+.mail-preview {
+    gap: 30px;
+    padding: 5px;
+}
+
+.mail-preview .fullname {
+    font-weight: bold;
+}
+
+.mail-preview .subject {
+    font-weight: bold;
+}
+
+.mail-preview .body {}
+
+.mail-preview .sent-at {
+    font-weight: bold;
+}

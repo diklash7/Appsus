@@ -1,3 +1,13 @@
+/* PARTS MAIL */
+
+@import '../css/apps/mail/parts/base.css';
+@import '../css/apps/mail/parts/helpers.css';
+
+/* CMPS MAIL */
+
+@import '../css/apps/mail/cmps/mail-list.css';
+@import '../css/apps/mail/cmps/mail-filter.css';
+@import '../css/apps/mail/cmps/mail-preview.css';
 .app-header {
     padding: 10px;
     display: flex;
