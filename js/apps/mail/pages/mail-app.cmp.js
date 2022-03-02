@@ -1,7 +1,7 @@
 export default {
     template:`
         <section class="mail-app app-main">
-            <h3>book</h3>
+            <h3>mail</h3>
         </section>
     `,
 }
