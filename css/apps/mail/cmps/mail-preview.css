@@ -1,4 +1,5 @@
 .mail-preview {
+    /* margin-left: 300px; */
     gap: 30px;
     padding: 5px;
 }
@@ -11,8 +12,11 @@
     font-weight: bold;
 }
 
-.mail-preview .body {}
-
 .mail-preview .sent-at {
+    cursor: pointer;
+}
+
+.mail-preview .sent-at:hover {
+    display: none;
     font-weight: bold;
 }

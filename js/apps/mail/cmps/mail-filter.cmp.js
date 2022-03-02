@@ -1,33 +1,29 @@
 export default {
     template: `
         <section class="mail-filter">
-            <!-- <div>
-                Search:
-            </div>
-            <span class="price-range"> <span>Title: </span>
-            <input  type="text" v-model="filterBy.title" placeholder="Search..."></span>
-            <label> 
-            <span>Min:</span>
-                <input  type="number" v-model="filterBy.fromPrice" >
-                <span>Max:</span>
-                <input  type="number" v-model="filterBy.toPrice" > 
-            </label>
-            <button class="btn-filter" @click="setFilter">Filter</button> -->
+            <div class="searches">
+                <span>🔍</span> 
+                <input @input="setFilter" type="text" v-model="filterBy.fullname" 
+                placeholder="Search mail">
+                <select v-model="filterBy.isRead">
+                    <option>All</option>
+                    <option>Read</option>
+                    <option>Unread</option>
+                </div>
+            </select>
         </section>
     `,
     data() {
         return {
-            // filterBy: {
-            //     title: '',
-            //     price: 200,
-            //     fromPrice: 0,
-            //     toPrice: 0
-            // }
+            filterBy: {
+                fullname: '',
+                isRead: false,
+            }
         };
     },
     methods: {
-        // setFilter() {
-        //     this.$emit('filtered', {...this.filterBy });
-        // }
+        setFilter() {
+            this.$emit('filtered', {...this.filterBy });
+        }
     }
 }
