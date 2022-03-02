@@ -7,7 +7,7 @@ export default {
         <section class="note-app app-main">
             <h3>noteapp</h3>
             <note-filter @filtered="setFilter" />
-            <note-list :notes="notesForDisplay"/>
+            <note-list :notes="notesForDisplay" @remove="removeNote" />
         </section>
     `,
     components: {
@@ -27,6 +27,18 @@ export default {
             .then(notes => this.notes = notes);
     },
     methods: {
+        removeNote(id) {
+            noteService.remove(id)
+                .then(() => {
+                    const idx = this.notes.findIndex((note) => note.id === id);
+                    this.notes.splice(idx, 1);
+                    // eventBus.emit('show-msg', { txt: 'Deleted succesfully', type: 'success' });
+                })
+                .catch(err => {
+                    console.error(err);
+                    // eventBus.emit('show-msg', { txt: 'Error - please try again later', type: 'error' });
+                });
+        },
         setFilter(filterBy) {
             this.filterBy = filterBy;
         }
@@ -35,8 +47,8 @@ export default {
     computed: {
         notesForDisplay() {
             if (!this.filterBy) return this.notes;
-            const regex = new RegExp(this.filterBy.txt, 'i');
-            return this.notes.filter(note => regex.test(note.txt));
+            const regex = new RegExp(this.filterBy.type, 'i');
+            return this.notes.filter(note => regex.test(note.type));
         }
     },
 }

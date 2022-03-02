@@ -1,0 +1,19 @@
+.note-list{
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.note-preview {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    border-radius: 10px;
+}
