@@ -8,6 +8,12 @@
 @import '../css/apps/mail/cmps/mail-list.css';
 @import '../css/apps/mail/cmps/mail-filter.css';
 @import '../css/apps/mail/cmps/mail-preview.css';
+
+/* CMPS NOTES*/
+@import '../css/apps/keep/note-preview.css';
+
+
+
 .app-header {
     padding: 10px;
     display: flex;
