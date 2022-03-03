@@ -1,4 +1,7 @@
-// import noteTypeTxt from './note-type-txt.cmp.js'
+import noteTxt from './note-txt.cmp.js'
+import noteImg from './note-img.cmp.js'
+// import noteTodos from './note-todos.cmp.js'
+import noteVideo from './note-video.cmp.js'
 import notePreview from './note-preview.cmp.js'
 export default {
     props: ['notes'],
@@ -15,7 +18,8 @@ export default {
                 </select>
             </form>
             <ul>
-                <li v-for="note in notes" :key="note.id" > 
+                <li  v-for="note in notes"> 
+                    <component :is="note.type" :info="note.info"> </component>
                     <note-preview :note="note"/>
                     <div class="actions">
                     <button @click="remove(note.id)">X</button>
@@ -33,7 +37,10 @@ export default {
     },
     components: {
         notePreview,
-        // noteTypeTxt
+        noteTxt,
+        noteImg,
+        // noteTodos,
+        noteVideo
     },
     methods: {
         remove(id) {
