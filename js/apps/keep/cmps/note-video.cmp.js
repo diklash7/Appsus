@@ -1,4 +1,5 @@
 export default {
+    props: ['info'],
     template: `
     <section>
     <label>
@@ -17,7 +18,6 @@ src={{info.url}}>
     </section>
     
     `,
-    props: ['info'],
     data() {
         return {
             val: '',
