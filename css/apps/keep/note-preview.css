@@ -17,3 +17,9 @@
     justify-content: space-between;
     border-radius: 10px;
 }
+
+.note-input{
+/* width: 100%;
+padding: 10px 10px 10px 50px */
+margin: 100px;
+}

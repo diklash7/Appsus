@@ -3,7 +3,7 @@ export default {
     props: ['notes'],
     template: `
         <section class="note-list">
-            <input type="text" placeholder="What's on your mind...">
+            <input type="text" class="note-input" placeholder="What's on your mind...">
             <ul>
                 <li v-for="note in notes" :key="note.id"> 
                     <note-preview :note="note"/>
@@ -12,6 +12,7 @@ export default {
                     </div> 
                 </li>
             </ul>
+            <button @click="save">save</button>
         </section>
 
 `,
