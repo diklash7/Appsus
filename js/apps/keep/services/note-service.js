@@ -30,6 +30,22 @@ function _createNotes() {
             },
             {
                 id: "n102",
+                type: "note-txt",
+                isPinned: true,
+                info: {
+                    txt: "Sprint 3! help!!!"
+                }
+            },
+            {
+                id: "n103",
+                type: "note-txt",
+                isPinned: true,
+                info: {
+                    txt: "Fullstack Me Baby!"
+                }
+            },
+            {
+                id: "n104",
                 type: "note-img",
                 info: {
                     url: "http://some-img/me",
@@ -40,7 +56,7 @@ function _createNotes() {
                 }
             },
             {
-                id: "n103",
+                id: "n105",
                 type: "note-todos",
                 info: {
                     label: "Get my stuff together",
@@ -50,7 +66,18 @@ function _createNotes() {
                     ]
                 }
 
-            }
+            },
+            {
+                id: "n106",
+                type: "note-video",
+                info: {
+                    url: "https://www.youtube.com/watch?v=ed4XYtWZqgQ",
+                    title: "Idan Amedi"
+                },
+                style: {
+                    backgroundColor: "#00d"
+                }
+            },
         ];
 
         utilService.saveToStorage(NOTES_KEY, notes);
