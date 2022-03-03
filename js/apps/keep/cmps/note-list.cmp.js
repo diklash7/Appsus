@@ -13,7 +13,6 @@ export default {
                     <option value="Enter video URL">Video</option>
                     <option value="Enter comma seperated list..">List</option>
                 </select>
-
             </form>
             <ul>
                 <li v-for="note in notes" :key="note.id" > 
