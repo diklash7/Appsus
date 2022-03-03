@@ -30,19 +30,26 @@ function _createNotes() {
             },
             {
                 id: "n102",
-                type: "fff",
-                isPinned: true,
+                type: "note-img",
                 info: {
-                    txt: "take Me home!"
+                    url: "http://some-img/me",
+                    title: "Bobi and Me"
+                },
+                style: {
+                    backgroundColor: "#00d"
                 }
             },
             {
                 id: "n103",
-                type: "note-txt",
-                isPinned: true,
+                type: "note-todos",
                 info: {
-                    txt: "let Me go!"
+                    label: "Get my stuff together",
+                    todos: [
+                        { txt: "Driving liscence", doneAt: null },
+                        { txt: "Coding power", doneAt: 187111111 }
+                    ]
                 }
+
             }
         ];
 
