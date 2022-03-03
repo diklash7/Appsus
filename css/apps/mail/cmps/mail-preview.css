@@ -1,7 +1,13 @@
 .mail-preview {
-    /* margin-left: 300px; */
     gap: 30px;
     padding: 5px;
+}
+
+.open-details {
+    display: flex;
+    gap: 30px;
+    color: black;
+    text-decoration: none;
 }
 
 .mail-preview .fullname {
@@ -9,14 +15,33 @@
 }
 
 .mail-preview .subject {
+    margin-left: 30px;
     font-weight: bold;
+    width: 100px;
+}
+
+.mail-preview .body {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 1rem;
+    white-space: wrap;
+    margin-left: 60px;
+    margin-right: 100px;
 }
 
 .mail-preview .sent-at {
     cursor: pointer;
+    padding-right: 10px;
+    position: absolute;
+    right: 100px;
 }
 
 .mail-preview .sent-at:hover {
     display: none;
     font-weight: bold;
+}
+
+.actions {
+    position: absolute;
+    right: 30px;
 }

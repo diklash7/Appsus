@@ -1,11 +1,13 @@
 export default {
     props: ['mail'],
     template: `
+    
         <section class="mail-preview flex">
+          <router-link class="open-details" :to="'/mail/'+mail.id">
                 <span class="fullname">{{mail.fullname}}</span>
                 <span class="subject">{{mail.subject}}</span>
                 <span class="body">{{mail.body}}</span>
-         
+            </router-link>
                 <div>
                     <span class="sent-at">{{months}} </span>
                 </div>
@@ -13,8 +15,9 @@ export default {
                    <button class=""  @click="remove(mail.id)">🗑️</button>
                    <button class="" @click="read(book.id)">✉️</button>
              </div>
-            
+             
             </section>
+            <hr>
             
     `,
     data() {
@@ -23,7 +26,6 @@ export default {
     created() {},
     methods: {
         remove(mailId) {
-            console.log(mailId);
             this.$emit('remove', mailId)
         }
     },

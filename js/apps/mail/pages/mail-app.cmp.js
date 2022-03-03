@@ -6,9 +6,23 @@ import mailList from '../cmps/mail-list.cmp.js';
 export default {
     template: `
         <section class="mail-app app-main">
-            <h3>Apps place</h3>
-              <mail-filter @filtered="setFilter" />
-           <mail-list :mails="mailsForDisplay" />
+               <section class="mail-menu">
+                   <!-- <button class="btn-compos">➕ <span>Compos</span></button> -->
+                   <router-link class="btn-compos" to="/mail/form"><span class="plus">+ </span><span>Compos</span></router-link>
+
+
+                 <ul class="btn-menu">
+                     <li>Inbox</li>
+                    <li>Started</li>
+                    <li>Sent Mail</li>
+                    <li>Drafts</li>
+                 </ul>
+                 <div class="progress">32%</div>
+                </section>
+               <div class="mail-display">
+                   <mail-filter @filtered="setFilter" />
+                   <mail-list :mails="mailsForDisplay" />
+                </div>
         </section>
     `,
 
@@ -27,6 +41,12 @@ export default {
             .then(mails => this.mails = mails);
     },
     methods: {
+        form() {
+            `
+            
+            
+            `
+        },
         setFilter(filterBy) {
             this.filterBy = filterBy;
         }

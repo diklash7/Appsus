@@ -53,27 +53,45 @@ function _createMails() {
                 fullname: 'Dikla',
                 id: 'e101',
                 subject: 'Miss you!',
-                body: 'Would love to catch up sometimes',
+                body: 'Lorem ipsum dolor,  id vel sit quidem illum ab minus labore consequuntur, atque voluptatum suscipit repudiandae, quia hic ullam quisquam ipsam voluptatibus',
                 isRead: false,
-                sentAt: 111111,
+                sentAt: '',
                 to: 'momo@momo.com'
             },
             {
                 fullname: 'Itsar',
                 id: 'e102',
                 subject: 'Hello friend!',
-                body: 'What are you doing?',
+                body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam illo inventore possimus mollitia praesentium quaerat, similique magni accusantium qui repellat culpa exercitationem ipsum nobis repellendus. Porro dolore natus fugit esse?',
                 isRead: false,
-                sentAt: 2222222,
+                sentAt: '',
                 to: 'popo@popo.com'
             },
             {
                 fullname: 'Inbar',
                 id: 'e103',
                 subject: 'Good bye!',
-                body: 'I am going',
+                body: 'Lorem ipsum dolor sit amet,  Porro dolore natus fugit esse?',
                 isRead: false,
-                sentAt: 3333333,
+                sentAt: '',
+                to: 'lolo@lolo.com'
+            },
+            {
+                fullname: 'Ohad',
+                id: 'e104',
+                subject: 'Good bye!',
+                body: 'Lorem ipsum dolor sit amet,  Porro dolore natus fugit esse?',
+                isRead: false,
+                sentAt: '',
+                to: 'lolo@lolo.com'
+            },
+            {
+                fullname: 'Shira',
+                id: 'e105',
+                subject: 'hiiiiiiii!',
+                body: 'Lorem ipsum dolor sit amet,  Porro dolore natus fugit esse?',
+                isRead: false,
+                sentAt: '',
                 to: 'lolo@lolo.com'
             }
 

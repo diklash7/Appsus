@@ -8,11 +8,14 @@
 @import '../css/apps/mail/cmps/mail-list.css';
 @import '../css/apps/mail/cmps/mail-filter.css';
 @import '../css/apps/mail/cmps/mail-preview.css';
+@import '../css/apps/mail/cmps/mail-details.css';
+@import '../css/apps/mail/cmps/mail-app.css';
 
 /* CMPS NOTES*/
+
 @import '../css/apps/keep/note-preview.css';
 
-
+/* APP HEADER AND FOOTER */
 
 .app-header {
     padding: 10px;
@@ -25,4 +28,8 @@
 .app-header {
     background-color: lightseagreen;
     height: 5vh;
+}
+
+.app-footer {
+    text-align: center;
 }
