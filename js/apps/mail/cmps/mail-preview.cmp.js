@@ -9,9 +9,7 @@ export default {
                 <span class="fullname">{{mail.fullname}}</span>
              <span class="content">
                <span class="subject">{{mail.subject}}</span>
-               <span class="body">
-               <long-text :text="mail.body"/>
-               {{mail.body}}
+               <span class="body"> {{mail.body}}
                </span>
              </span>
            </router-link>

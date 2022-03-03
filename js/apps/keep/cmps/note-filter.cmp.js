@@ -2,7 +2,6 @@ export default {
     template: `
         <section class="note-filter">
             <label>
-            Search notes
             <input ref="noteInput" @input="setFilter" type="text" v-model="filterBy.type" placeholder="Search notes">
             </label>
         </section>
@@ -14,12 +13,12 @@ export default {
             }
         };
     },
-    mounted(){
+    mounted() {
         this.$refs.noteInput.focus()
     },
     methods: {
         setFilter() {
-            this.$emit('filtered', {...this.filterBy});
+            this.$emit('filtered', {...this.filterBy });
         }
     }
 }

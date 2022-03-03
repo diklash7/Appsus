@@ -1,8 +1,8 @@
-export default{
-    template:`
+export default {
+    template: `
     <section>
     <label>
-    <iframe width="200" height="315"
+    <iframe class="video-1" width="160" height="160"
 src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </iframe>
     <!-- <iframe width="50" height="315"
@@ -17,24 +17,24 @@ src={{info.url}}>
     </section>
     
     `,
-    props:['info'],
-    data(){
-        return{
-            val:'',
+    props: ['info'],
+    data() {
+        return {
+            val: '',
         }
-    
+
     },
-    methods:{
-        reportVal(){
+    methods: {
+        reportVal() {
             this.$emit('setVal', this.val)
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    }
+
+
+
+
+
+
+
+
+}

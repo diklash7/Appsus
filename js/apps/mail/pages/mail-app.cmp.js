@@ -8,9 +8,9 @@ export default {
                <section class="mail-menu">
                    <router-link class="btn-compos" to="/mail/form"><span class="plus">+ </span><span>Compos</span></router-link>
                  <ul class="btn-menu">
-                    <li class="inbox">Inbox</li>
+                    <li @click="setFilter" class="inbox">Inbox</li>
                     <li class="started">Started</li>                              
-                    <li @filtered=setFilterSent class="sent-mail">Sent Mail</li>
+                    <li @click="setFilterSent" class="sent-mail">Sent Mail</li>
                     <li  class="drafts">Drafts</li>
                  </ul>
                  <div class="progress">32%</div>
@@ -21,7 +21,6 @@ export default {
                 </div>
         </section>
     `,
-
     components: {
         mailFilter,
         mailList,
@@ -29,7 +28,12 @@ export default {
     data() {
         return {
             mails: null,
-            filterBy: null
+            myFilterBy: {
+                status: 'inbox',
+                txt: '',
+                isRead: false,
+                mail: '',
+            }
         };
     },
     created() {
@@ -38,16 +42,17 @@ export default {
     },
     methods: {
         setFilter(filterBy) {
-            this.filterBy = filterBy;
+            this.myFilterBy.txt = filterBy;
         },
-        // setFilterSent(filterBy) {
-        //     if
-        // }
+        setFilterSent() {
+            this.myFilterBy.status = 'sent'
+        }
     },
     computed: {
         mailsForDisplay() {
-            if (!this.filterBy) return this.mails;
-            const regex = new RegExp(this.filterBy.fullname, 'i');
+            if (!this.myFilterBy.txt) return this.mails;
+            console.log(this.myFilterBy.txt);
+            const regex = new RegExp(this.myFilterBy.fullname, 'i');
             return this.mails.filter(mail => regex.test(mail.fullname));
         }
     },

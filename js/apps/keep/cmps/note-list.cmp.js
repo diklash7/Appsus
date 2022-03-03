@@ -16,17 +16,17 @@ export default {
                     <option value="Enter video URL">Video</option>
                     <option value="Enter comma seperated list..">List</option>
                 </select>
+                <button class="btn-save" @click="save">save</button>
             </form>
             <ul>
-                <li  v-for="note in notes"> 
+                <li class="note-style"  v-for="note in notes"> 
                     <component :is="note.type" :info="note.info"> </component>
-                    <note-preview :note="note"/>
-                    <div class="actions">
-                    <button @click="remove(note.id)">X</button>
-                    </div> 
+                    <button class="btn-remove" @click="remove(note.id)">X</button>
+                    <!-- <note-preview :note="note"/> -->
+                    <!-- <div class="actions">
+                    </div>  -->
                 </li>
             </ul>
-            <button @click="save">save</button>
         </section>
 
 `,

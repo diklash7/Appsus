@@ -8,7 +8,7 @@ export default {
            <section class="form-container">
              <form @submit.prevent="send">
                    <input type="text" v-model="mailToSend.to" placeholder="To:">
-                   <input type="text" v-model="mailToSend.fullname" placeholder="fullname:">
+                   <input type="text" v-model="mailToSend.fullname" placeholder="Fullname:">
                    <input type="text" v-model="mailToSend.subject" placeholder="Subject:">
                    <textarea  v-model="mailToSend.body" cols="30" rows="20">
                    </textarea>
