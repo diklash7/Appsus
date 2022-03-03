@@ -1,6 +1,6 @@
 import noteTxt from './note-txt.cmp.js'
 import noteImg from './note-img.cmp.js'
-// import noteTodos from './note-todos.cmp.js'
+import noteTodos from './note-todos.cmp.js'
 import noteVideo from './note-video.cmp.js'
 import notePreview from './note-preview.cmp.js'
 export default {
@@ -39,7 +39,7 @@ export default {
         notePreview,
         noteTxt,
         noteImg,
-        // noteTodos,
+        noteTodos,
         noteVideo
     },
     methods: {

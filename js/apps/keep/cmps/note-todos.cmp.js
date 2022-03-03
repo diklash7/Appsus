@@ -4,7 +4,7 @@ export default{
     <label>
     
     {{info.label}}
-    {{todos.txt}}
+    {{info.todos.txt}}
     <!-- <input type="text" v-model="val" @change="reportVal"/> -->
     
     </label>
