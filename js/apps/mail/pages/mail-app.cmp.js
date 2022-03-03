@@ -8,18 +8,10 @@ export default {
                <section class="mail-menu">
                    <router-link class="btn-compos" to="/mail/form"><span class="plus">+ </span><span>Compos</span></router-link>
                  <ul class="btn-menu">
-                 <router-link class="inbox" to="/mail">
-                     <li>Inbox</li>
-                 </router-link>
-                 <router-link class="started" to="/mail">
-                    <li>Started</li>
-                    </router-link>
-                    <router-link class="sent-mail" to="/mail/sent-mail">
-                    <li>Sent Mail</li>
-                    </router-link>
-                    <router-link class="drafts" to="/mail">
-                    <li>Drafts</li>
-                    </router-link>
+                    <li class="inbox">Inbox</li>
+                    <li class="started">Started</li>                              
+                    <li @filtered=setFilterSent class="sent-mail">Sent Mail</li>
+                    <li  class="drafts">Drafts</li>
                  </ul>
                  <div class="progress">32%</div>
                 </section>
@@ -45,15 +37,12 @@ export default {
             .then(mails => this.mails = mails);
     },
     methods: {
-        form() {
-            `
-            
-            
-            `
-        },
         setFilter(filterBy) {
             this.filterBy = filterBy;
-        }
+        },
+        // setFilterSent(filterBy) {
+        //     if
+        // }
     },
     computed: {
         mailsForDisplay() {

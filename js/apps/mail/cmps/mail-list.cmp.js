@@ -7,9 +7,9 @@ export default {
     template: `
             <section class="mail-list">
                 <ul>
-                    <li v-for="mail in mails" :key="mail.id" class="mail-preview-container" >
-                         <mail-preview :mail="mail" @remove="removeMail" />
-                    </li>
+                  <li v-for="mail in mails" :key="mail.id" class="mail-preview-container" >
+                    <mail-preview :mail="mail" @remove="removeMail"/>  
+                 </li>
                 </ul>
             </section>
 `,

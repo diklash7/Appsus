@@ -54,10 +54,9 @@
             .mail-app ul {
                 list-style: none;
             }
-            
-            .mail-app .mail-display {
+            /* .mail-app .mail-display {
                 margin-left: 10%;
-            }
+            } */
             
             .mail-app .btn-menu li {
                 width: 100%;

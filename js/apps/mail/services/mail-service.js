@@ -4,17 +4,18 @@ import { storageService } from '../../../services/async-storage-service.js'
 const STORAGE_KEY = 'mails';
 _createMails();
 
-// const loggedinUser = {
-//     email: 'user@appsus.com',
-//     fullname: 'Mahatma Appsus'
-// }
+const loggedinUser = {
+    mail: 'user@appsus.com',
+    fullname: 'Mahatma Appsus'
+}
 
 export const mailService = {
     query,
     remove,
     save,
     get,
-    getEmptyMail
+    getEmptyMail,
+    saveMailSent
 };
 
 function query() {
@@ -32,6 +33,16 @@ function get(mailId) {
 function save(mail) {
     if (mail.id) return storageService.put(STORAGE_KEY, mail);
     else return storageService.post(STORAGE_KEY, mail);
+}
+
+function saveMailSent(mailId, sent) {
+    return get(mailId)
+        .then(mail => {
+            if (!mail.sents) mail.sents = []
+            mail.sents.push(sent)
+            save(mail)
+            return mail
+        })
 }
 
 function getEmptyMail() {

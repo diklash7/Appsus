@@ -1,6 +1,7 @@
 .mail-preview {
     gap: 30px;
     padding: 5px;
+    height: 30px;
 }
 
 .open-details {
@@ -14,19 +15,21 @@
     font-weight: bold;
 }
 
-.mail-preview .subject {
-    margin-left: 30px;
-    font-weight: bold;
-    width: 100px;
-}
-
-.mail-preview .body {
+.mail-preview .content {
     overflow: hidden;
     text-overflow: ellipsis;
     height: 1rem;
-    white-space: wrap;
-    margin-left: 60px;
-    margin-right: 100px;
+}
+
+.mail-preview .subject {
+    white-space: nowrap;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.mail-preview .body {
+    color: gray;
+    margin-left: 30px;
 }
 
 .mail-preview .sent-at {
@@ -34,11 +37,11 @@
     padding-right: 10px;
     position: absolute;
     right: 100px;
+    font-weight: bold;
 }
 
 .mail-preview .sent-at:hover {
     display: none;
-    font-weight: bold;
 }
 
 .actions {

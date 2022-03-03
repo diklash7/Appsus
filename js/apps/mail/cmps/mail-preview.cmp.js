@@ -1,11 +1,19 @@
+import longText from "../cmps/long-text.cmp.js";
+
+
 export default {
     props: ['mail'],
     template: `
         <section class="mail-preview flex">
            <router-link class="open-details" :to="'/mail/'+mail.id">
                 <span class="fullname">{{mail.fullname}}</span>
-                <span class="subject">{{mail.subject}}</span>
-                <span class="body">{{mail.body}}</span>
+             <span class="content">
+               <span class="subject">{{mail.subject}}</span>
+               <span class="body">
+               <long-text :text="mail.body"/>
+               {{mail.body}}
+               </span>
+             </span>
            </router-link>
              <div>
                 <span class="sent-at">{{months}} </span>
@@ -20,6 +28,9 @@ export default {
     `,
     data() {
         return {}
+    },
+    components: {
+        longText,
     },
     created() {},
     methods: {
