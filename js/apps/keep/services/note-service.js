@@ -71,7 +71,7 @@ function _createNotes() {
                 id: "n106",
                 type: "note-video",
                 info: {
-                    url: "https://www.youtube.com/watch?v=ed4XYtWZqgQ",
+                    url: "https://www.youtube.com/embed/tgbNymZ7vqY",
                     title: "Idan Amedi"
                 },
                 style: {

@@ -8,7 +8,7 @@ export default {
     template: `
         <section class="note-list">
             <form  @submit.prevent="save">
-                <input type="text" class="note-input" :placeholder="fromTimeWindow">
+                <input type="text" class="note-input" :placeholder="fromTimeWindow" >
                 <select name="type" v-model="fromTimeWindow">
                     <option value="all">ALL</option>
                     <option value="What's on your mind...">Text</option>
@@ -22,6 +22,7 @@ export default {
                 <li class="note-style"  v-for="note in notes"> 
                     <component :is="note.type" :info="note.info"> </component>
                     <button class="btn-remove" @click="remove(note.id)">X</button>
+                    <input type="color" :style="note.id.backgroundColor" class="btn-remove" v-model="note.id.backgroundColor" >X
                     <!-- <note-preview :note="note"/> -->
                     <!-- <div class="actions">
                     </div>  -->
@@ -32,7 +33,10 @@ export default {
 `,
     data() {
         return {
-            fromTimeWindow: 'Hey here is custom placeholder'
+            fromTimeWindow: 'Hey here is custom placeholder',
+            styleObject:{
+                backgroundColor: 'yellow'
+            }
         }
     },
     components: {
@@ -48,12 +52,22 @@ export default {
             this.$emit('remove', id);
         },
     },
+    save() {
+        if (!this.note.id) return;
+        noteService.save(this.note)
+            // .then(note => {
+            //     eventBus.emit('show-msg', { txt: 'Saved succesfully', type: 'success' })
+            //     this.$router.push('/note')
+            // });
+    },
     computed: {
         placeHolderType() {
             console.log('type:', notes.type);
 
+        },
+        changeBcg(noteId){
+           return note.id.styleObject.backgroundColor
         }
-
 
     }
 

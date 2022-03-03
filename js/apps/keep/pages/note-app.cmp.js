@@ -7,7 +7,9 @@ export default {
         <section class="note-app app-main">
             <!-- <h3>noteapp</h3> -->
             <note-filter @filtered="setFilter" />
+            <router-link to="/note/edit">Add a new note</router-link>
             <note-list :notes="notesForDisplay" @remove="removeNote" />
+            <note-edit/>
         </section>
     `,
     components: {
@@ -47,8 +49,8 @@ export default {
     computed: {
         notesForDisplay() {
             if (!this.filterBy) return this.notes;
-            const regex = new RegExp(this.filterBy.type, 'i');
-            return this.notes.filter(note => regex.test(note.type));
+            const regex = new RegExp(this.filterBy.info, 'i');
+            return this.notes.filter(note => regex.test(note.info.txt));
         }
     },
 }

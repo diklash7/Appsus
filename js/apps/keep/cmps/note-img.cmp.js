@@ -6,7 +6,8 @@ export default{
     {{info.url}}
     {{info.title}}
     <!-- <input type="text" v-model="val" @change="reportVal"/> -->
-    
+    <!-- <img :src="currentSeasonImg"> -->
+   
     </label>
     </section>
     
