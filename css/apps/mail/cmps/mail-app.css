@@ -15,6 +15,7 @@
                 font-weight: 500;
                 transition: all 0.4s;
                 text-decoration: none;
+                position: relative;
             }
             
             .btn-compos .plus {
@@ -28,6 +29,26 @@
             
             .btn-compos span {
                 font-size: 1.5rem;
+            }
+            
+            .inbox {
+                text-decoration: none;
+                color: black;
+            }
+            
+            .started {
+                text-decoration: none;
+                color: black;
+            }
+            
+            .sent-mail {
+                text-decoration: none;
+                color: black;
+            }
+            
+            .drafts {
+                text-decoration: none;
+                color: black;
             }
             
             .mail-app ul {

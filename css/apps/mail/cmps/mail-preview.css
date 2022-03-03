@@ -45,3 +45,7 @@
     position: absolute;
     right: 30px;
 }
+
+.actions button {
+    cursor: pointer;
+}

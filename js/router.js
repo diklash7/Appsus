@@ -32,6 +32,7 @@ const routes = [{
         path: '/mail/form',
         component: mailForm
     },
+
     {
         path: '/mail/:mailId',
         component: mailDetails
