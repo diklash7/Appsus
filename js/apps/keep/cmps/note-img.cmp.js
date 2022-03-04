@@ -1,40 +1,18 @@
-export default{
-    template:`
-    <section>
-    <label>
-    <!-- <img :src="ImgUrl"> -->
-    {{info.url}}
-    {{info.title}}
-    <!-- <input type="text" v-model="val" @change="reportVal"/> -->
-    <!-- <img :src="currentSeasonImg"> -->
-   
-    </label>
-    </section>
+export default {
+    props: ['info'],
+    template: `
+        <section class="note-img">
+           
+            <h3>{{info.title}}</h3>
+            <img :src="info.url">
+
+         </section>
     
     `,
-    props:['info'],
-    data(){
-        return{
-            val:'',
+    data() {
+        return {
+           
         }
-    
-    },
-    methods:{
-        reportVal(){
-            this.$emit('setVal', this.val)
-        }
-    },
-    computed:{
-        ImgUrl(){
-            return this.note.url
-        }  
+
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    }
+}

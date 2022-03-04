@@ -11,7 +11,7 @@ export default {
                 <input type="text" class="note-input" :placeholder="fromTimeWindow" >
                 <select name="type" v-model="fromTimeWindow">
                     <option value="all">ALL</option>
-                    <option value="What's on your mind...">Text</option>
+                    <option value="What's on your mind...">Text</option><img src="/../../../../../../img/text.png">
                     <option value="Enter image URL">Image</option>
                     <option value="Enter video URL">Video</option>
                     <option value="Enter comma seperated list..">List</option>
@@ -21,8 +21,14 @@ export default {
             <ul>
                 <li class="note-style"  v-for="note in notes"> 
                     <component :is="note.type" :info="note.info"> </component>
-                    <button class="btn-remove" @click="remove(note.id)">X</button>
-                    <input type="color" :style="note.id.backgroundColor" class="btn-remove" v-model="note.id.backgroundColor" >X
+                    <!-- <button class="btn-remove" @click="remove(note.id)"><img src="../../../../img/bin.png"></button> -->
+                    <input type="color" :style="note.id.backgroundColor" class="btn-remove" v-model="note.id.backgroundColor" >
+                    <button class="btn-remove" @click="remove(note.id)"><img class="imgBtn" src="../../../../img/bin.png">
+                    <img class="imgBtn" src="../../../../img/copying.png">
+                    <img class="imgBtn" src="../../../../img/edit.png">
+                    <img class="imgBtn" src="../../../../img/pin.png">
+                    <img class="imgBtn" src="../../../../img/check-mark.png">
+                    <img class="imgBtn" src="../../../../img/palette.png">
                     <!-- <note-preview :note="note"/> -->
                     <!-- <div class="actions">
                     </div>  -->
