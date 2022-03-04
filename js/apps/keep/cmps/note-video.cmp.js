@@ -1,5 +1,6 @@
 export default {
     props: ['info'],
+<<<<<<< HEAD
     template: `
     <section>
     <label>
@@ -37,4 +38,23 @@ src={{info.url}}>
 
 
 
+=======
+        template: `
+            <section class="note-video">
+    
+                    <h3>{{info.title}}</h3>
+                
+                    <iframe width="200"
+                         :src="info.url">
+                     </iframe>
+
+            </section>
+    `,
+    data() {
+        return {
+
+        }
+
+    }
+>>>>>>> 658bb46b6a3f94a3662d6c5248d23c3de503fb50
 }

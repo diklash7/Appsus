@@ -21,6 +21,10 @@ export default {
     created() {
         const id = this.$route.params.noteId;
         if (id) {
+<<<<<<< HEAD
+=======
+            console.log('id:', id);
+>>>>>>> 658bb46b6a3f94a3662d6c5248d23c3de503fb50
             noteService.get(id)
                 .then(note => this.noteToEdit = note);
         } else {

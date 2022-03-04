@@ -9,7 +9,11 @@
 .note-style {
     padding: 10px;
     margin: 10px;
+<<<<<<< HEAD
     width: 250px;
+=======
+    width: 300px;
+>>>>>>> 658bb46b6a3f94a3662d6c5248d23c3de503fb50
     /* height: 150px; */
     background-color: rgba(243, 182, 101, 0.288);;
     display: flex;
@@ -45,4 +49,18 @@
     width: 30px;
     margin-left: 88%;
     padding: 3px;
+<<<<<<< HEAD
 }
+=======
+}
+
+.imgBtn{
+    width:20px;
+    
+}
+/* .btn-remove */
+/* .note-img{
+    width:100px;
+    height: 100px;; */
+/* } */
+>>>>>>> 658bb46b6a3f94a3662d6c5248d23c3de503fb50
